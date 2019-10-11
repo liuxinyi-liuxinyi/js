@@ -1,0 +1,43 @@
+<!-- 点击a的时候b的字体颜色和背景颜色都发生改变 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#a{
+			border: 3px solid red;
+			width: 160px;
+			padding: 5px;
+			border-radius: 10px;/* 圆角 */
+			cursor: pointer;/* 鼠标滑过之后有个手的形状 */
+			margin: 0 auto;
+			text-align: center;
+			font-weight: bold;
+			/* font-weight:normal; */
+			font-color:red;
+		}
+		#b{
+			width: 320px;
+			border: 1px solid blue;
+			padding: 10px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="a">点击之后改变信息样式</div>
+	<div id="b">点击之显示的信息后点击之显示的信息后点击之显示的信息后</div>
+	<!-- 元素.style.css属性名='属性值' -->
+	<script>
+		var a=document.getElementById('a')
+		var b=document.getElementById('b')
+		a.onclick=function () {
+			b.style.color='red';
+			b.style.background='blue'
+			b.style.fontSize='36px'
+		}
+	</script>
+</body>
+</html>
